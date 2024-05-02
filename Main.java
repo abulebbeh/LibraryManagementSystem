@@ -9,44 +9,50 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args){
+        // Setup for receiving user input
         Scanner scanner = new Scanner(System.in);
+        // Initialize the library catalog
         LibraryCatalog catalog = new LibraryCatalog();
 
+        // Flag to control the main program loop
         boolean running = true;
         while (running){
+            // DDisplay options for the user
             System.out.println("Choose an option:");
             System.out.println("1. Add Book");
             System.out.println("2. Checkout Book");
             System.out.println("3. Return Book");
             System.out.println("4. Search Book");
             System.out.println("5. Exit");
-            int choice = scanner.nextInt();
+            int choice = scanner.nextInt(); // Get user choise
             scanner.nextLine();
 
+            // Switch to process the user's choice
             switch (choice){
-                case 1:
+                case 1: // Add a book to the catalog
                     addBookViaUserInput(scanner, catalog);
                     break;
-                case 2:
+                case 2: // Checkout a book from the catalog
                     checkoutBook(scanner, catalog);
                     break;
-                case 3:
+                case 3: // Return a book from the catalog
                     returnBook(scanner, catalog);
                     break;
-                case 4:
+                case 4: // Search for a book in the catalog
                     searchBook(scanner, catalog);
                     break;
-                case 5:
+                case 5: // Exit the program
                     running = false;
                     System.out.println("Exiting program.");
                     break;
-                default:
+                default: // Handle invalid options
                 System.out.println("Invalid option. Please choose again.");
             }
         }
         scanner.close();
     }
 
+// Method to add a book via user input
 private static void addBookViaUserInput(Scanner scanner, LibraryCatalog catalog){
     System.out.println("Enter book type (Fiction/NonFiction): ");
     String type = scanner.nextLine();
@@ -68,6 +74,7 @@ private static void addBookViaUserInput(Scanner scanner, LibraryCatalog catalog)
     if (type.equalsIgnoreCase("Fiction")){
         System.out.println("Enter genre: ");
         String genre = scanner.nextLine();
+        // Create a fiction book and add to catalog
         FictionBook book = new FictionBook(title, author, isbn, isAvailable, genre);
         catalog.addBook(book);
         System.out.println("Fiction book added: " + book.getTitle());
@@ -75,6 +82,7 @@ private static void addBookViaUserInput(Scanner scanner, LibraryCatalog catalog)
     else if (type.equalsIgnoreCase("NonFiction")){
         System.out.println("Enter subject: ");
         String subject = scanner.nextLine();
+        // Create a non-fiction book and add to catalog
         NonFictionBook book = new NonFictionBook(title, author, isbn, isAvailable, subject);
         catalog.addBook(book);
         System.out.println("NonFiction book added: "+ book.getTitle());
