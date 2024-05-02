@@ -25,11 +25,40 @@ LibraryItem Interface Methods:
 - returnItem()
 - getStatus()
 
-Inheritable Classes FictionBook extends Book Extra Field: private String genre; Methods: displayDetails() //Override to include subject
+Inheritable Classes 
+- FictionBook extends Book
 
-LibraryCatalog Class Fields: private ArrayList books; Constructor: LibraryCatalog() Methods: addBook(Book book) removeBookByISBN(String ISBN) searchBookByTitle(String title) checkout(String ISBN) //Implements LibraryItem returnItem(String ISBN) //Implements LibraryItem getStatus(String ISBN) //Implements LibraryItem
+Extra Field:
+- private String genre;
 
-Main Application Flow: Create Book, FictionBook, and NonFictionBook objects Add to LibraryCatalog Perform a checkout and return operation Display status after operation Enhanced LibraryCatalog Class with User Input Method
+Methods:
+- displayDetails() //Override to include subject
 
-AddBookViaUserInput() Method: Prompt the user for book details (title, author, ISBN, availability, and if applicable, genre or subject based on the book type) Create a Book, FictionBook, or NonFictionBook object based on the input Add the created book object to the ArrayList
-Integration in the Main Application Provide a menu option for the user to select if they want to add a book Based on the user's choice, invoke addBookViaUserInput()
+LibraryCatalog Class Fields: 
+- private ArrayList books; 
+
+Constructor: 
+- LibraryCatalog() 
+
+Methods: 
+- addBook(Book book)
+- removeBookByISBN(String ISBN)
+- searchBookByTitle(String title)
+- checkout(String ISBN) //Implements LibraryItem
+- returnItem(String ISBN) //Implements
+- LibraryItem getStatus(String ISBN) //Implements LibraryItem
+
+Main Application Flow: 
+- Create Book, FictionBook, and NonFictionBook objects 
+- Add to LibraryCatalog
+- Perform a checkout and return operation
+- Display status after operation
+- Enhanced LibraryCatalog Class with User Input Method
+
+AddBookViaUserInput() Method: 
+- Prompt the user for book details (title, author, ISBN, availability, and if applicable, genre or subject based on the book type)
+- Create a Book, FictionBook, or NonFictionBook object based on the input
+- Add the created book object to the ArrayList
+- Integration in the Main Application
+- Provide a menu option for the user to select if they want to add a book
+- Based on the user's choice, invoke addBookViaUserInput()
