@@ -5,9 +5,11 @@ The Workflow:
 
 Book Class Fields: 
 - private String title, author, ISBN; 
-- private boolean isAvailable 
+- private boolean isAvailable
+
 Constructor:
-- Book(title, author, ISBN, isAvailable) 
+- Book(title, author, ISBN, isAvailable)
+
 Methods:
 - getTitle()
 - setTitle(newTitle)
@@ -18,7 +20,10 @@ Methods:
 - isAvailable()
 - setAvailable(availability)
 
-LibraryItem Interface Methods: checkout() returnItem() getStatus()
+LibraryItem Interface Methods: 
+- checkout()
+- returnItem()
+- getStatus()
 
 Inheritable Classes FictionBook extends Book Extra Field: private String genre; Methods: displayDetails() //Override to include subject
 
