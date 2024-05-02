@@ -3,8 +3,20 @@ A simple Library Management System (LMS) using Java. This system will manage a c
 
 The Workflow:
 
-Book Class Fields: private String title, author, ISBN; private boolean isAvailable Constructor: Book(title, author, ISBN, isAvailable) Methods:
-getTitle() setTitle(newTitle) getAuthor() setAuthor(newAuthor) getISBN() setISBN(newISBN) isAvailable() setAvailable(availability)
+Book Class Fields: 
+- private String title, author, ISBN; 
+- private boolean isAvailable 
+Constructor:
+- Book(title, author, ISBN, isAvailable) 
+Methods:
+- getTitle()
+- setTitle(newTitle)
+- getAuthor()
+- setAuthor(newAuthor)
+- getISBN()
+- setISBN(newISBN)
+- isAvailable()
+- setAvailable(availability)
 
 LibraryItem Interface Methods: checkout() returnItem() getStatus()
 
